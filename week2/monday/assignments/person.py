@@ -5,7 +5,10 @@ class Person(object):
         self.phone = phone
         self.friends = []
         self.greeting_count = 0
+        self.unique_people_greeted = []
     def greet(self, other_person):
+        if other_person not in self.unique_people_greeted:
+            self.unique_people_greeted.append(other_person)
         print 'Hello %s, I am %s!' % (other_person.name, self.name)
         self.greeting_count += 1
     def print_contact_info(self):
@@ -16,6 +19,8 @@ class Person(object):
         return len(self.friends)
     def __repr__(self):
         return self.name + 'object'
+    def num_unique_people_greeted(self):
+        return len(self.unique_people_greeted)
 
 sonny = Person('Sonny','sonny@hotmail.com','482-485-4948')
 jordan = Person('Jordan','jordan@aol.com','495-586-3456')
@@ -31,3 +36,4 @@ print(jordan.friends[0].name)
 print(jordan.num_friends())
 print(jordan.greeting_count)
 print(jordan)
+print(jordan.num_unique_people_greeted())
