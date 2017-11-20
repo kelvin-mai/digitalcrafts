@@ -2,13 +2,23 @@ class TodoList(object):
     def __init__(self, todos = []):
         self.todos = todos
     def add_task(self, task):
+        print("Added '" + task + "' to todo list")
         self.todos.append(task)
+    def add_priority(self, task):
+        print("Added '" + task + "' to todo list with priority")
+        self.todos.insert(0,task)
     def view_tasks(self):
+        if len(self.todos) == 0:
+            print("No items in todo list")
+            return
         for task in self.todos:
             print(task)
     def remove_task(self, task):
+        if task not in self.todos:
+            print("Task not in todo list")
         for i in range(0,len(self.todos)):
             if task == self.todos[i]:
+                print("Removed '" + task + "' from todo list")
                 del self.todos[i]
                 break
 
@@ -27,12 +37,16 @@ while True:
 
     if choice == 'q':
         break
-    elif choice == 'add':
-        todos.add_task(raw_input('Input task to add: '))
-    elif choice == 'view':
+    elif choice.replace(' ','').lower() == 'add':
+        priority = raw_input("Is it important? 'y' or 'n': ")
+        if priority == 'y':
+            todos.add_priority(raw_input('Input task to add: '))
+        else:
+            todos.add_task(raw_input('Input task to add: '))
+    elif choice.replace(' ','').lower() == 'view':
         todos.view_tasks()
-    elif choice == 'remove':
+    elif choice.replace(' ','').lower() == 'remove':
         todos.remove_task(raw_input('Input task to remove: '))
     else:
-        print("Invalid option")
+        print("Invalid option"),
         prompt()
