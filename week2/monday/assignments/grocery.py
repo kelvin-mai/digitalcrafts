@@ -2,7 +2,7 @@ class ShoppingList(object):
     def __init__(self, store = ''):
         self.store = store
         self.items = []
-    def add_item(self, items):
+    def add_items(self, items):
         for item in items:
             self.items.append(item)
     def print_items(self):
@@ -20,9 +20,9 @@ groceries = Groceries([
     ShoppingList('Sams Club')
 ])
 
-groceries.lists[0].items.append(['Milk', 'Soda', 'Fish'])
-groceries.lists[1].items.append(['Paper', 'Napkins', 'Plate', 'Chips'])
-groceries.lists[2].items.append(['Chicken','Beef','Eggs','Sugar','Salt','Pepper','Honey'])
+groceries.lists[0].add_items(['Milk','Soda','Fish'])
+groceries.lists[1].add_items(['Paper','Napkins','Plate','Chips'])
+groceries.lists[2].add_items(['Chicken','Beef','Eggs','Sugar','Salt','Pepper','Honey'])
 
 for lists in groceries.lists:
     lists.print_items()
