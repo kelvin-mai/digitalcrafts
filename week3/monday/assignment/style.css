@@ -1,0 +1,69 @@
+body {
+  background-image: url('90s-back.jpg');
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  @media (min-width: 800px) {
+    text-align: left;
+  }
+}
+
+a {
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+.navbar {
+    background-color: black;
+    border: 1px solid white;
+    margin-bottom: 10px;
+}
+
+.navbar ul li {
+  margin: auto;
+  list-style: none;
+  padding: 15px;
+  display: inline;
+}
+
+.content {
+    background-color: black;
+    border: 1px solid white;
+    padding: 10px;
+    margin: auto;
+    width: 90%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media (min-width: 800px) {
+  .navbar {
+      border: 5px solid white;
+      float: left;
+      width: 30%;
+      height: 500px;
+  }
+
+  .navbar ul li {
+    display: block;
+  }
+
+  .content {
+    border: 5px solid white;
+    float: right;
+    padding-left: 20px;
+    width: 60%;
+  }
+}

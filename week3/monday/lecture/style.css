@@ -1,0 +1,29 @@
+* {
+  text-align: center;
+}
+
+.index {
+  background-color: azure;
+}
+.about {
+  background-color: aliceblue;
+}
+.contact {
+  background-color: teal;
+}
+.portfolio {
+  background-color: beige;
+}
+
+.portfolio div {
+  width: 100%;
+  height: 40%;
+  margin: 10px auto;
+}
+
+.education {
+  background-color: gray;
+}
+.professional {
+  background-color: black;
+}

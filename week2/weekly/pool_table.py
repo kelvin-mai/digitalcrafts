@@ -35,10 +35,9 @@ class PoolTable(object):
             return float(hour + 0.01*minute)
         else:
             print('Table not yet occupied')
+            return 0.0
     def to_dictionary(self):
         return { 'name':self.name,'occupied' : self.occupied,'hour': self.hour, 'minute': self.minute}
-    def __repr__(self):
-        return str(self.occupied)
 
 class Tables(object):
     def __init__(self, cost = 0.0):
@@ -66,4 +65,8 @@ class Tables(object):
                 print(' -- Start time: ' + str(table.hour) + ':' + str(table.minute)),
             print('\n')
     def checkin(self,index):
-        print('Cost of stay was: $' + str(self.tables[index].checkin() * self.cost ))
+        checkin = self.tables[index].checkin()
+        if checkin > 0:
+            return 'Cost of stay was: $' + str(checkin * self.cost )
+        else:
+            return ''
