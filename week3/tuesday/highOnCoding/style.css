@@ -132,9 +132,12 @@ a {
   }
   .category {
     display: inline-block;
-    width: 27%;
+    width: 29%;
     margin: 1em;
     border: none;
     border-radius: 12px;
+  }
+  .row {
+    margin: auto;
   }
 }
