@@ -1,0 +1,143 @@
+* {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+}
+.header {
+  background-color: #4286f4;
+  color: white;
+}
+.header_logo {
+  text-align: center;
+  font-size: 2.6em;
+  font-weight: 500;
+  padding-top: 10px;
+  margin-top: 0;
+}
+.nav {
+  margin-bottom: 0;
+}
+.nav_button {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1em;
+  padding: 0 1em 0.25em 0;
+}
+.nav_button-active {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.hero {
+  background-color: #c1c4c9;
+  padding: 0.5em 1em;
+}
+.post {
+  padding: 1em 1em;
+}
+.post_title {
+  font-size: 1.6em;
+  color: #4286f4;
+}
+.post p {
+  margin-bottom: 0;
+}
+.post_response {
+  background-color: orange;
+  margin-top: 0;
+  border-radius: 8px;
+}
+.post_response li {
+  list-style: none;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  color: white;
+}
+.category {
+  text-align: center;
+  background-color: #c1c4c9;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid white;
+  padding-bottom: 1em;
+  padding-top: 2.6em;
+}
+.category h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+/* bigger than mobile */
+@media (min-width: 426px) {
+  .header {
+    padding-left: 2em;
+  }
+
+  .header_logo {
+    text-align: left;
+    display: inline-block;
+    width: 37%;
+    padding-top: 0.5em;
+  }
+
+  .hero {
+    background-color: #c1c4c9;
+    margin: 1em;
+    border-radius: 12px;
+  }
+
+  .nav {
+    text-align: center;
+  }
+
+  .post {
+    width: 90%;
+    margin: 1.5em auto;
+  }
+  .post_response {
+    text-align: right;
+  }
+  .post_response li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    color: white;
+  }
+}
+/* bigger than tablet */
+@media (min-width: 770px) {
+  .container  {
+    max-width: 82%;
+    margin: auto;
+  }
+
+  .nav {
+    float: right;
+    margin: 2em;
+    display: inline-block;
+  }
+
+  .nav_button {
+    display: inline;
+    padding: 1em;
+  }
+
+  .nav_button-active {
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+  .category {
+    display: inline-block;
+    width: 29%;
+    margin: 1em;
+    border: none;
+    border-radius: 12px;
+  }
+  .row {
+    margin: auto;
+  }
+}
