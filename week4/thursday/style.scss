@@ -1,0 +1,25 @@
+.Article {
+  margin: auto;
+  width: 80%;
+  font-family: sans-serif;
+
+  a {
+    font-color: inherit;
+    text-decoration: none;
+  }
+  h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  img {
+    width: 100%;
+    text-align: center;
+  }
+  &-description {
+    font-size: 1.3rem;
+  }
+  &-published {
+    text-align: right;
+    font-size: 0.8rem;
+  }
+}

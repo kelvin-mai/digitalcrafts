@@ -1,0 +1,20 @@
+.Article {
+  margin: auto;
+  width: 80%;
+  font-family: sans-serif; }
+  .Article a {
+    font-color: inherit;
+    text-decoration: none; }
+  .Article h2 {
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .Article img {
+    width: 100%;
+    text-align: center; }
+  .Article-description {
+    font-size: 1.3rem; }
+  .Article-published {
+    text-align: right;
+    font-size: 0.8rem; }
+
+/*# sourceMappingURL=style.css.map */
