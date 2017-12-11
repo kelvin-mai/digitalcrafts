@@ -46,7 +46,7 @@ function addPending(task){
 function addCompleted(task){
   $('#completed').append(
     $('<li/>').text(task).append($('<span class="task-remove">Remove</span>'))
-      .prepend($('<input type=checkbox />'))
+      .prepend($('<input type=checkbox checked/>'))
   );
 }
 
