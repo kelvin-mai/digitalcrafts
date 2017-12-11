@@ -49,3 +49,18 @@ function addCompleted(task){
       .prepend($('<input type=checkbox />'))
   );
 }
+
+$(window).on('beforeunload', function(){
+  pendingTasks = [];
+  completedTasks = [];
+
+  $('#pending li').each(function(){
+    pendingTasks.push($(this).text().split('Remove').join(''));
+  });
+  $('#completed li').each(function(){
+    completedTasks.push($(this).text().split('Remove').join(''));
+  });
+
+  localStorage.pendingTasks = JSON.stringify(pendingTasks);
+  localStorage.completedTasks = JSON.stringify(completedTasks);
+});
