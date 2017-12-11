@@ -38,5 +38,3 @@ function updateMap(lat, lng) {
   };
   var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
-
-updateMap('0', '0');
