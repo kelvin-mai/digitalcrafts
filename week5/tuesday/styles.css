@@ -1,0 +1,27 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+#search-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-details div {
+  margin-left: 1rem;
+}
+
+#search-results li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.search-bar {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
