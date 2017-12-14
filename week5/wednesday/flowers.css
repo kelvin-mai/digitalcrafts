@@ -1,0 +1,32 @@
+.flower-container {
+  width: 60%;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.flower-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flower-form input {
+  width: 50%;
+}
+#message {
+  background-color: #42f495;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
