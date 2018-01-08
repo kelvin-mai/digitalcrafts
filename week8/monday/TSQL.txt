@@ -1,0 +1,61 @@
+
+azamsharp=# CREATE DATABASE studentsdb;
+CREATE DATABASE
+azamsharp=# \connect studentsdb;
+
+
+// to see all the relations (tables)
+\dt
+
+// creating a new students table
+create table students (
+ studentId serial primary key,
+ firstname varchar(50) not null,
+ lastname varchar(50) not null,
+ graduated boolean not null default 'f',
+ cohort integer not null);
+
+ // get all the rows and columns from the students table
+ select * from students;
+
+ // inserting one student
+ insert into students(firstname,lastname,graduated,cohort) values('john','doe','t',2017);
+
+ // creating projects table
+ create table projects (
+ projectid serial primary key,
+ name varchar(50),
+ studentId integer REFERENCES students(studentid)
+ );
+
+// if you try to insert a studentid into the project table which does not exist // then an error will be thrown. The foreign key constraint makes sure that the // only studentid you can insert into the projects table exists in the students // table
+
+ insert into projects(name,studentid) values('Cat App',23);
+ ERROR:  insert or update on table "projects" violates foreign key constraint "projects_studentid_fkey"
+ DETAIL:  Key (studentid)=(23) is not present in table "students".
+
+
+// select all the students where the cohort is 2015
+select * from students where cohort = 2015;
+
+
+// selecting all students who belong to cohort 2015 and order them ascending using their firstname
+
+select * from students where cohort = 2015 order by firstname;
+
+
+// selecting the students who are in cohort 2015 and ordering them in descending order using their firstname
+select * from students where cohort = 2015 order by firstname desc ;
+
+// update the students table and set the cohort to 2018 for the
+// student who has the studentid = 3
+update students set cohort = 2018 where studentid = 3;
+
+// what would this do ??
+update students set firstname = 'Clown';
+
+// delete the students who have not graduated
+delete from students where graduated = 'f';
+
+// joining students table with projects table
+select firstname, lastname, graduated, cohort from students join projects on students.studentid = projects.studentid;
